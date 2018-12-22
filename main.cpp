@@ -9,14 +9,12 @@
 #include <iostream>
 #include <fstream>
 #include "trie_sort.hpp"
-//#include "sort_string_node.hpp"
-
-
+#include "sort_string_node.hpp"
 
 
 int main(int argc, char* argv[]) {
     
-    TrieSortNode<int> head;
+    TrieSortNode<SortStringNode> head;
     
     std::string line;
     std::ifstream myfile("input.txt");
@@ -26,13 +24,12 @@ int main(int argc, char* argv[]) {
     }
     
     while (getline(myfile, line)) {
-        //SortStringNode p(line);
-        head.foo();
+        head.insert(SortStringNode(line));
     }
     myfile.close();
     
-    /*
-    std::ofstream outputFile("output.txt");
+    
+    std::ofstream outputFile("output1.txt");
     if (!outputFile.is_open()) {
         std::cerr << "Failed to open output.txt" << std::endl;
     }
@@ -42,7 +39,7 @@ int main(int argc, char* argv[]) {
         outputFile << ((std::string)arr[i]) << std::endl;
     }
     
-    outputFile.close();*/
+    outputFile.close();
     
     return 0;
 }

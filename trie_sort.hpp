@@ -9,25 +9,15 @@
 #ifndef trie_sort_hpp
 #define trie_sort_hpp
 
-//#include <stdio.h>
-//#include <vector>
+#include <stdio.h>
+#include <vector>
 
 // T must implement
 // unsigned maxIndex()
-// unsigned hash(int index);
+// unsigned hash(unsigned index);
 // void add(unsigned index);
 // unsigned size();
 
-template <class T>
-class TrieSortNode {
-public:
-    
-    TrieSortNode() {}
-    
-    void foo();
-};
-
-/*
 template <class T>
 class TrieSortNode {
 private:
@@ -38,16 +28,17 @@ public:
     
     TrieSortNode() : children(T().size()), count(0) {}
     
-    void insert();
+    void insert(const T &value);
  
     operator std::vector<T>() const { return sort(); }
     std::vector<T> sort(T value) const;
     std::vector<T> sort() const { return sort(T()); }
  
-//private:
-    //void insert(const T &value, int index);
-    //std::vector<T> sort(std::vector<T> &arr, T &value) const;
+private:
+    void insert(const T &value, unsigned index);
+    void sort(std::vector<T> &arr, T &value) const;
 };
-*/
+
+#include "trie_sort.cpp"
 
 #endif /* trie_sort_hpp */

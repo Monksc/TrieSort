@@ -22,7 +22,7 @@ public:
     unsigned maxIndex() const;
     unsigned hash(int index) const;
     void add(unsigned index);
-
+    
     operator std::string() const { return str; }
     
 private:

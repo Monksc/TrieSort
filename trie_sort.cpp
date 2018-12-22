@@ -8,26 +8,25 @@
 
 #include "trie_sort.hpp"
 
-
 template <class T>
-void TrieSortNode<T>::foo() {
-    
+void TrieSortNode<T>::insert(const T &value) {
+    insert(value, 0);
 }
 
-/*
 template <class T>
-void TrieSortNode<T>::insert(const T &value, int index) {
+void TrieSortNode<T>::insert(const T &value, unsigned index) {
     
-    if (index < 0) {
+    if (index > value.maxIndex()) {
         count++;
         return;
     }
     
     unsigned i = value.hash(index);
     if (children[i] == NULL) {
-        children[i] = new TrieSortNode(children.size());
+        children[i] = new TrieSortNode();
     }
-    children[i]->insert(value, index - 1);
+    
+    children[i]->insert(value, index + 1);
 }
 
 template <class T>
@@ -41,7 +40,7 @@ std::vector<T> TrieSortNode<T>::sort(T value) const {
 }
 
 template <class T>
-std::vector<T> TrieSortNode<T>::sort(std::vector<T> &arr, T &value) const {
+void TrieSortNode<T>::sort(std::vector<T> &arr, T &value) const {
     
     for (unsigned i = 0; i < count; i++) {
         arr.push_back(value);
@@ -55,5 +54,5 @@ std::vector<T> TrieSortNode<T>::sort(std::vector<T> &arr, T &value) const {
             children[i]->sort(arr, v);
         }
     }
+
 }
-*/
