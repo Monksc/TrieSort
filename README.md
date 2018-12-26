@@ -6,12 +6,12 @@ This is my implementation of a Trie Sort. A Trie Sort is when you put all of you
 Before you insert you must view your data as an array. A string can be an array of characters. An integer can be an array of bits. Then when you go to insert it, lets say we are inserting the word car. Each node will have an array size 26 of pointers to other Nodes. It will also have a count variable. We will then start with the head node then go to the 2nd ('c') index node. Then that node's 'a' first index and finally go to the 'r' index node. Then increment the count by 1 on just the last node.
 
 # Sorting Elements
-The elements by default are already sorted. 
+The elements by default are already sorted. You just need to pull them out. To do this recursively, you start with the head node. You then create a new default string object if your sorting strings or 0 for ints. Then for strings you go to the first index ('a') and add an a to the object. Then add in this object of just a string of 'a' to the array the count given times. Eventually it will become sorted.
 
+# O Notation
+It can sort in O(N * D) where N is the size of the array and D is the depth of the Trie. If it were to sort words in a dictionary the N would be the amount of words and the D would be the average size of each word. It sorts it in linear time for unsigned int of 16 bit values because N is the size of the array and D will be a constant 16.
 
-It can sort an array in O(N * D) where N is the size of the array and D is the depth of the Trie. If it were to sort words in a dictionary the N would be the amount of words and the D would be the average size of each word. It sorts it in linear time for unsigned int of 16 bit values. 
-
-
+# Comparing my trie sort to C++ std::sort
 When word size is 1.
 Words Count 	    My method (seconds) 	   C++ method (seconds) 	 
       10000 	                0.00445 	                0.00495 	 
