@@ -12,12 +12,14 @@ It can sort in O(N * D) where N is the size of the array and D is the depth of t
 <br />
 # Comparing my trie sort to C++ std::sort
 When word size is 1.<br />
-Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
+<span>
+Words Count           My method (seconds) 	   C++ method (seconds)<br />
       10000 	                0.00445 	                0.00495<br />
      100000 	                 0.0343 	                  0.038<br />
     1000000 	                  0.305 	                  0.401<br />
    10000000 	                    3.8 	                   3.87<br />
   100000000 	                   37.1 	                   41.2<br />
+</span>
 <br />
 When word size is 2.<br />
 Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
