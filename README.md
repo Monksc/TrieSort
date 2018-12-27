@@ -12,7 +12,7 @@ The elements by default are already sorted. You just need to pull them out. To d
 It can sort in O(N * D) where N is the size of the array and D is the depth of the Trie. If it were to sort words in a dictionary the N would be the amount of words and the D would be the average size of each word. It sorts it in linear time for unsigned int of 16 bit values because N is the size of the array and D will be a constant 16.
 
 # Comparing my trie sort to C++ std::sort
-When word size is 1.
+When word size is 1.<br />
 Words Count 	    My method (seconds) 	   C++ method (seconds) 	 
       10000 	                0.00445 	                0.00495 	 
      100000 	                 0.0343 	                  0.038 	 
