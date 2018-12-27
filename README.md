@@ -27,8 +27,9 @@ Markdown | Less | Pretty
 |100000000|37.1 |41.2|
 <br />
 When word size is 2.
+
 |Words Count|My method (seconds)|C++ method (seconds)|
-|---------:|------------------:|-------------------:|
+|----------:|------------------:|-------------------:|
 |10000|0.00422|0.00787|
 |100000|0.0328|0.071|
 |1000000|0.311|0.708|
@@ -36,6 +37,7 @@ When word size is 2.
 |100000000|39|70.3|
 <br />
 When word size is 3.
+
 Words Count|My method (seconds)|C++ method (seconds)
 |---------:|------------------:|-------------------:|
 10000|0.0102|0.00892
@@ -44,13 +46,15 @@ Words Count|My method (seconds)|C++ method (seconds)
 10000000|4.44|10.2
 100000000|45|103
 <br />
-When word size is 4.<br />
-Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
-      10000 	                 0.0171 	                0.00898<br /> 
-     100000 	                  0.127 	                  0.111<br /> 
-    1000000 	                  0.859 	                   1.31<br /> 
-   10000000 	                   6.74 	                   13.8<br /> 
-  100000000 	                   63.5 	                    134<br /> 
+When word size is 4.
+
+Words Count|My method (seconds)|C++ method (seconds)
+|---------:|------------------:|-------------------:|
+10000|0.0171|0.00898
+100000|0.127|0.111
+1000000|0.859|1.31
+10000000|6.74|13.8
+100000000|63.5|134
 <br />
 When word size is 5.<br />
 Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
