@@ -74,6 +74,7 @@ Words Count|My method (seconds)|C++ method (seconds)
 When word size is 7.
 
 Words Count|My method (seconds)|C++ method (seconds)
+|---------:|------------------:|-------------------:
 10000|0.0369|0.00894
 100000|0.338|0.112
 1000000|3.07|1.34
