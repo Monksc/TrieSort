@@ -1,33 +1,32 @@
 # TrieSort
-
 This is my implementation of a Trie Sort. A Trie Sort is when you put all of your elements into a trie and then remove them into an array. 
-
+<br />
 # Inserting Elements
 Before you insert you must view your data as an array. A string can be an array of characters. An integer can be an array of bits. Then when you go to insert it, lets say we are inserting the word car. Each node will have an array size 26 of pointers to other Nodes. It will also have a count variable. We will then start with the head node then go to the 2nd ('c') index node. Then that node's 'a' first index and finally go to the 'r' index node. Then increment the count by 1 on just the last node.
-
+<br />
 # Sorting Elements
 The elements by default are already sorted. You just need to pull them out. To do this recursively, you start with the head node. You then create a new default string object if your sorting strings or 0 for ints. Then for strings you go to the first index ('a') and add an a to the object. Then add in this object of just a string of 'a' to the array the count given times. Eventually it will become sorted.
-
+<br />
 # O Notation
 It can sort in O(N * D) where N is the size of the array and D is the depth of the Trie. If it were to sort words in a dictionary the N would be the amount of words and the D would be the average size of each word. It sorts it in linear time for unsigned int of 16 bit values because N is the size of the array and D will be a constant 16.
-
+<br />
 # Comparing my trie sort to C++ std::sort
 When word size is 1.<br />
-Words Count 	    My method (seconds) 	   C++ method (seconds) 	 
-      10000 	                0.00445 	                0.00495 	 
-     100000 	                 0.0343 	                  0.038 	 
-    1000000 	                  0.305 	                  0.401 	 
-   10000000 	                    3.8 	                   3.87 	 
-  100000000 	                   37.1 	                   41.2 	 
-
-When word size is 2.
-Words Count 	    My method (seconds) 	   C++ method (seconds) 	 
-      10000 	                0.00422 	                0.00787 	 
-     100000 	                 0.0328 	                  0.071 	 
-    1000000 	                  0.311 	                  0.708 	 
-   10000000 	                   4.17 	                   7.14 	 
-  100000000 	                     39 	                   70.3 	 
-
+Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
+      10000 	                0.00445 	                0.00495<br />
+     100000 	                 0.0343 	                  0.038<br />
+    1000000 	                  0.305 	                  0.401<br />
+   10000000 	                    3.8 	                   3.87<br />
+  100000000 	                   37.1 	                   41.2<br />
+<br />
+When word size is 2.<br />
+Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
+      10000 	                0.00422 	                0.00787<br />
+     100000 	                 0.0328 	                  0.071<br />
+    1000000 	                  0.311 	                  0.708<br />
+   10000000 	                   4.17 	                   7.14<br />
+  100000000 	                     39 	                   70.3<br />
+<br />
 When word size is 3.
 Words Count 	    My method (seconds) 	   C++ method (seconds) 	 
       10000 	                 0.0102 	                0.00892 	 
