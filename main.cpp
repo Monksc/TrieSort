@@ -11,7 +11,6 @@
 #include "trie_sort.hpp"
 #include "sort_string_node.hpp"
 
-
 int main(int argc, char* argv[]) {
     
     TrieSortNode<SortStringNode> head;
@@ -24,6 +23,7 @@ int main(int argc, char* argv[]) {
     }
     
     while (getline(myfile, line)) {
+        PRETAZALS++;
         head.insert(SortStringNode(line));
     }
     myfile.close();
@@ -36,10 +36,13 @@ int main(int argc, char* argv[]) {
     
     std::vector<SortStringNode> arr = head;
     for (unsigned i = 0; i < arr.size(); i++) {
+        PRETAZALS++;
         outputFile << ((std::string)arr[i]) << std::endl;
     }
     
     outputFile.close();
+    
+    std::cout << "Operations Left: " << PRETAZALS << std::endl;
     
     return 0;
 }

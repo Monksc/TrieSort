@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <vector>
 
+unsigned long long PRETAZALS = 0;
+
 // T must implement
 // unsigned maxIndex()
 // unsigned hash(unsigned index);
@@ -27,6 +29,7 @@ private:
 public:
     
     TrieSortNode() : children(T().size()), count(0) {}
+    ~TrieSortNode();
     
     void insert(const T &value);
  
@@ -38,6 +41,12 @@ private:
     void insert(const T &value, unsigned index);
     void sort(std::vector<T> &arr, T &value) const;
 };
+
+template <class T, class K>
+std::vector<K> convertTo(const std::vector<T> &arr);
+
+template <class T, class K>
+std::vector<T> sort(const std::vector<T> &arr);
 
 #include "trie_sort.cpp"
 
