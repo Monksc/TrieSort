@@ -11,31 +11,38 @@ The elements by default are already sorted. You just need to pull them out. To d
 It can sort in O(N * D) where N is the size of the array and D is the depth of the Trie. If it were to sort words in a dictionary the N would be the amount of words and the D would be the average size of each word. It sorts it in linear time for unsigned int of 16 bit values because N is the size of the array and D will be a constant 16.
 <br />
 # Comparing my trie sort to C++ std::sort
-When word size is 1.<br />
-<span>
-Words Count           My method (seconds) 	   C++ method (seconds)<br />
-      10000 	                0.00445 	                0.00495<br />
-     100000 	                 0.0343 	                  0.038<br />
-    1000000 	                  0.305 	                  0.401<br />
-   10000000 	                    3.8 	                   3.87<br />
-  100000000 	                   37.1 	                   41.2<br />
-</span>
+When word size is 1
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+|Words Count|My method (seconds)|C++ method (seconds)|
+|---------:|------------------:|-------------------:|
+|10000|0.00445|0.00495|
+|100000|0.0343|0.038|
+|1000000|0.305|0.401|
+|10000000|3.8|3.87|
+|100000000|37.1 |41.2|
 <br />
-When word size is 2.<br />
-Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
-      10000 	                0.00422 	                0.00787<br />
-     100000 	                 0.0328 	                  0.071<br />
-    1000000 	                  0.311 	                  0.708<br />
-   10000000 	                   4.17 	                   7.14<br />
-  100000000 	                     39 	                   70.3<br />
+When word size is 2.
+|Words Count|My method (seconds)|C++ method (seconds)|
+|---------:|------------------:|-------------------:|
+|10000|0.00422|0.00787|
+|100000|0.0328|0.071|
+|1000000|0.311|0.708|
+|10000000|4.17|7.14|
+|100000000|39|70.3|
 <br />
-When word size is 3.<br />
-Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
-      10000 	                 0.0102 	                0.00892<br /> 
-     100000 	                 0.0489 	                  0.104<br /> 
-    1000000 	                  0.367 	                   1.03<br /> 
-   10000000 	                   4.44 	                   10.2<br /> 
-  100000000 	                     45 	                    103<br /> 
+When word size is 3.
+Words Count|My method (seconds)|C++ method (seconds)
+|---------:|------------------:|-------------------:|
+10000|0.0102|0.00892
+100000|0.0489|0.104
+1000000|0.367|1.03
+10000000|4.44|10.2
+100000000|45|103
 <br />
 When word size is 4.<br />
 Words Count 	    My method (seconds) 	   C++ method (seconds)<br />
