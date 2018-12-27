@@ -53,7 +53,7 @@ Words Count|My method (seconds)|C++ method (seconds)
 <br />
 When word size is 5.
 
-Words Count|My method (seconds)C++ method (seconds)
+Words Count|My method (seconds)|C++ method (seconds)
 |---------:|------------------:|-------------------:|
 10000|0.0241|0.00889
 100000|0.193|0.11
